@@ -125,38 +125,39 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                        )
     
     if selected == "Data Visualization":
-        st.title("Data Visualization")
-        visualization_option = st.sidebar.selectbox("Select a visualization", ["Histogram", "Bar Chart", "Scatter Plot"])
+       st.title("Data Visualization")
+       visualization_option = st.sidebar.selectbox("Select a visualization", ["Histogram", "Bar Chart", "Scatter Plot"])
 
         if visualization_option == "Histogram":
-        selected_column = st.sidebar.selectbox("Select a column for histogram", df.columns)
-        plt.figure(figsize=(12, 6))
-        plt.hist(df[selected_column], bins=20, color='skyblue', edgecolor='black')
-        plt.xlabel(selected_column)
-        plt.ylabel('Frequency')
-        plt.title(f'Histogram of {selected_column}')
-        plt.grid(False)
-        st.pyplot(plt)
+            selected_column = st.sidebar.selectbox("Select a column for histogram", df.columns)
+            plt.figure(figsize=(12, 6))
+            plt.hist(df[selected_column], bins=20, color='skyblue', edgecolor='black')
+            plt.xlabel(selected_column)
+            plt.ylabel('Frequency')
+            plt.title(f'Histogram of {selected_column}')
+            plt.grid(False)
+            st.pyplot(plt)
 
         elif visualization_option == "Bar Chart":
-        selected_column = st.sidebar.selectbox("Select a column for bar chart", df.columns)
-        plt.figure(figsize=(12, 6))
-        sns.countplot(x=selected_column, data=df)
-        plt.xlabel(selected_column)
-        plt.ylabel('Count')
-        plt.title(f'Bar Chart of {selected_column}')
-        plt.xticks(rotation=45)
-        st.pyplot(plt)
+            selected_column = st.sidebar.selectbox("Select a column for bar chart", df.columns)
+            plt.figure(figsize=(12, 6))
+            sns.countplot(x=selected_column, data=df)
+            plt.xlabel(selected_column)
+            plt.ylabel('Count')
+            plt.title(f'Bar Chart of {selected_column}')
+            plt.xticks(rotation=45)
+            st.pyplot(plt)
 
         elif visualization_option == "Scatter Plot":
-        x_axis = st.sidebar.selectbox("Select X-axis column", df.columns)
-        y_axis = st.sidebar.selectbox("Select Y-axis column", df.columns)
-        plt.figure(figsize=(12, 6))
-        plt.scatter(df[x_axis], df[y_axis])
-        plt.xlabel(x_axis)
-        plt.ylabel(y_axis)
-        plt.title(f'Scatter Plot of {x_axis} vs {y_axis}')
-        st.pyplot(plt)
+            x_axis = st.sidebar.selectbox("Select X-axis column", df.columns)
+            y_axis = st.sidebar.selectbox("Select Y-axis column", df.columns)
+            plt.figure(figsize=(12, 6))
+            plt.scatter(df[x_axis], df[y_axis])
+            plt.xlabel(x_axis)
+            plt.ylabel(y_axis)
+            plt.title(f'Scatter Plot of {x_axis} vs {y_axis}')
+            st.pyplot(plt)
+
     
     if selected == 'Prediction':
 
