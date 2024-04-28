@@ -29,9 +29,9 @@ def main():
     with st.sidebar:
         selected = option_menu('Parkinsons Disease Prediction',
                                ['About parkinsons', 'Prediction',
-                               'Contact us'],
+                               'Contact us','Data Vitualization'],
                                icons=['file-earmark-person-fill',
-                               'search', 'envelope'], default_index=0)
+                               'search', 'envelope','envelope'], default_index=0)
 
            # means firstly it shows index 0th code ie.,About parkinson
 
