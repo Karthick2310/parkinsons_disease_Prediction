@@ -125,8 +125,8 @@ Some other research has shown that people who consume caffeine \xe2\x80\x94 whic
                        )
     
     if selected == "Data Visualization":
-    st.title("Data Visualization")
-    visualization_option = st.sidebar.selectbox("Select a visualization", ["Histogram", "Bar Chart", "Scatter Plot"])
+        st.title("Data Visualization")
+        visualization_option = st.sidebar.selectbox("Select a visualization", ["Histogram", "Bar Chart", "Scatter Plot"])
 
         if visualization_option == "Histogram":
         selected_column = st.sidebar.selectbox("Select a column for histogram", df.columns)
